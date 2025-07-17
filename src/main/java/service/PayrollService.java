@@ -1,0 +1,61 @@
+package service;
+
+import model.Designer;
+import model.Developer;
+import model.Employee;
+import java.util.List;
+import java.util.Scanner;
+
+public class PayrollService {
+
+
+    public double calculateTotalPayroll(List<Employee> employees){
+        double totalPayroll = 0;
+
+        for (Employee e: employees){
+            totalPayroll += e.getsalary() + e.calculateBonus();
+        }
+        System.out.println("The total payroll is: " +totalPayroll);
+        return totalPayroll;
+    }
+
+    public void showEmployees(List<Employee> employees){
+        for (Employee e: employees){
+            System.out.println("Name: "+e.getname()+", Role: "+e.getRole()+ ", Salary: "+e.getsalary());
+        }
+    }
+
+    public void addEtoEmployees(List<Employee> employees,Employee e){
+        employees.add(e);
+    }
+
+    public Employee initializeEmployee(){
+        Scanner sc = new Scanner(System.in);
+        Employee employee = null;
+        int option;
+
+        System.out.println(
+                "What kind of employee do you want to create? \n"+
+                        "1. Developer \n"+
+                        "2. Designer"
+        );
+
+        option = sc.nextInt();
+        if (option == 1){
+            employee = new Developer();
+            employee.setRole("Developer");
+        } else if (option == 2) {
+            employee = new Designer();
+            employee.setRole("Designer");
+        }
+
+        System.out.print("Write the employee's name: ");
+        assert employee != null;
+        employee.setname(sc.next());
+        System.out.print("Write " +employee.getname()+ "'s salary: ");
+        employee.setsalary(sc.nextDouble());
+
+        return employee;
+
+    }
+}

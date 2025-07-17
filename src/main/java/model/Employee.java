@@ -1,0 +1,43 @@
+package model;
+
+public abstract class Employee {
+    private String name;
+    private double salary;
+    private String role;
+
+    public Employee() {
+    }
+
+    public Employee(String name, double salary, String role) {
+        this.name = name;
+        this.salary = salary;
+        this.role = role;
+    }
+
+
+    public String getname() {
+        return name;
+    }
+
+    public void setname(String name) {
+        this.name = name;
+    }
+
+    public double getsalary() {
+        return salary;
+    }
+
+    public void setsalary(double salary) {
+        this.salary = salary;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public abstract double calculateBonus();
+}
