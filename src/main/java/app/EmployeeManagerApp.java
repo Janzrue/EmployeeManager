@@ -1,3 +1,5 @@
+package app;
+
 import model.Employee;
 import service.PayrollService;
 
@@ -38,6 +40,7 @@ public class EmployeeManagerApp {
                     break;
             }
         }
+
         sc.close();
     }
 }

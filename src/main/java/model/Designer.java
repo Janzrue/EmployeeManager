@@ -10,7 +10,7 @@ public class Designer extends Employee{
 
     @Override
     public double calculateBonus() {
-        return getsalary() * 0.10;
+        return getSalary() * 0.10;
     }
 
 }

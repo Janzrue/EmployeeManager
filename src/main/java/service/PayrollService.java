@@ -13,7 +13,7 @@ public class PayrollService {
         double totalPayroll = 0;
 
         for (Employee e: employees){
-            totalPayroll += e.getsalary() + e.calculateBonus();
+            totalPayroll += e.getSalary() + e.calculateBonus();
         }
         System.out.println("The total payroll is: " +totalPayroll);
         return totalPayroll;
@@ -21,7 +21,7 @@ public class PayrollService {
 
     public void showEmployees(List<Employee> employees){
         for (Employee e: employees){
-            System.out.println("Name: "+e.getname()+", Role: "+e.getRole()+ ", Salary: "+e.getsalary());
+            System.out.println("Name: "+e.getName()+", Role: "+e.getRole()+ ", Salary: "+e.getSalary());
         }
     }
 
@@ -51,9 +51,9 @@ public class PayrollService {
 
         System.out.print("Write the employee's name: ");
         assert employee != null;
-        employee.setname(sc.next());
-        System.out.print("Write " +employee.getname()+ "'s salary: ");
-        employee.setsalary(sc.nextDouble());
+        employee.setName(sc.next());
+        System.out.print("Write " +employee.getName()+ "'s salary: ");
+        employee.setSalary(sc.nextDouble());
 
         return employee;
 

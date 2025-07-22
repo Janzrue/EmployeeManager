@@ -15,19 +15,19 @@ public abstract class Employee {
     }
 
 
-    public String getname() {
+    public String getName() {
         return name;
     }
 
-    public void setname(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public double getsalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setsalary(double salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 

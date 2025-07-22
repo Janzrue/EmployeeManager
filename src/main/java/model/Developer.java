@@ -10,6 +10,6 @@ public class Developer extends Employee{
 
     @Override
     public double calculateBonus() {
-        return getsalary() * 0.15;
+        return getSalary() * 0.15;
     }
 }
