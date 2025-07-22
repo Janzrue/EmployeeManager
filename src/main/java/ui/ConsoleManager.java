@@ -27,7 +27,7 @@ public class ConsoleManager {
 
     private void showMenu(){
         System.out.println("""
-                \nWelcome to Employee Manager. Select one of the following options:
+                \n=== Employee Management Menu ===
                 1. Create an employee
                 2. Show all employees
                 3. Calculate total payroll
@@ -63,9 +63,11 @@ public class ConsoleManager {
     }
 
     private void createEmployee(){
-        System.out.println("Select type of employee to create:");
-        System.out.println("1. Developer");
-        System.out.println("2. Designer");
+        System.out.println("""
+                === Employee Role Menu ===
+                1. Developer
+                2. Designer
+                """);
 
         int choice = -1;
         while (choice != 1 && choice != 2) {
